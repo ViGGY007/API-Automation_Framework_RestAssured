@@ -1,6 +1,6 @@
 package base;
 
-import utils.ConfigReader;
+import org.viggy.api.utils.ConfigReader;
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeClass;
 

@@ -1,4 +1,4 @@
-package utils;
+package org.viggy.api.utils;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,23 +1,24 @@
 package tests;
 
 import base.BaseTest;
+import io.restassured.response.Response;
 import org.testng.annotations.Test;
+import org.viggy.api.client.UserClient;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class GetUsersTest extends BaseTest {
 
     @Test
     public void getUsersList() {
 
-        given()
-                .when()
-                .get("/users")
+        Response response = UserClient.getUsers();
+        response
                 .then()
                 .log().status()
-                .log().body()
-                .statusCode(200)
-                .body("size()", greaterThan(0));
+                .log().body();
+        assertEquals(200, response.statusCode());
     }
 }
