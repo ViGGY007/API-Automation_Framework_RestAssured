@@ -5,8 +5,6 @@ import io.restassured.response.Response;
 import org.testng.annotations.Test;
 import org.viggy.api.client.UserClient;
 
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class GetUsersTest extends BaseTest {
